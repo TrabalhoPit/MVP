@@ -183,8 +183,8 @@ function montaSwalEdit(data) {
         }
     }).then(function (result) {
         if (result.isConfirmed) {
-            if (trataResultado(result.value) != false) {
-                $("[data-id-conteudo=" + data.index + "]").remove();
+            if (trataResultadoEdit(result.value, data.index) != false) {
+                // $("[data-id-conteudo=" + data.index + "]").remove();
                 montaMsg("Produto editado", "", "info");
             };
         }
@@ -193,6 +193,27 @@ function montaSwalEdit(data) {
     masks();
 }
 
+function trataResultadoEdit(values, indexOld) {
+    estoqueArray = estoqueArray.map((value, index) => {
+        if (index == indexOld) {
+            value.nomeProduto = values[0];
+            value.estoque = values[1];
+            value.valor = values[2];
+            return value;
+        }
+        return value;
+    })
+    excluirTabela();
+    remontaTabela();
+}
+
+function remontaTabela() {
+    estoqueArray.map((value) => {
+        if (value.show == 'V') {
+            trataResultado(Object.values(value), false, value.index);
+        }
+    });
+}
 
 $(document).on("click", "[data-sell-estoque]", function (e) {
     var index = $(this).data("sell-estoque");
@@ -234,9 +255,7 @@ $("[data-search-product]").on("click", function () {
 
     if (name === '') {
         excluirTabela();
-        estoqueArray.map((value) => {
-            trataResultado(Object.values(value), false, value.index);
-        });
+        remontaTabela();
         return;
     }
 
