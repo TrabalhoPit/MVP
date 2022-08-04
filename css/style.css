@@ -57,7 +57,7 @@ header {
     color: #A07B5A;
 }
 
-section {
+.first-section {
     position: absolute;
     top: 0;
     width: 100%;
@@ -86,16 +86,6 @@ section {
     height: 100%;
 }
 
-/* .container-second{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
- 
-} */
-
 .third{
     position: absolute;
     width: 826px;
@@ -103,7 +93,9 @@ section {
     left: -37px;
     top: 0px;
 }
-
-/* .third img{
-    position:absolute;
-} */
+/*--------------------------------------------------------------------------------*/
+/*---------------------------------Segunda section--------------------------------*/
+.second-section{
+    background-color: whitesmoke;
+    
+}
