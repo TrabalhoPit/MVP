@@ -40,7 +40,7 @@ header {
     margin-bottom: 2px;
 }
 
-.links.active {
+.links.home {
     color: #A07B5A;
 }
 
@@ -91,6 +91,15 @@ section {
     left: -37px;
     top: 0px;
 }
+/*-----------------------------------------------------------------------------------*/
+/*---------------------------------Animação do Scroll--------------------------------*/
+header nav div a:hover,
+header nav div a.links.home{
+    transition: 0.5s ease-out;
+    letter-spacing: 2px;
+} 
+
+
 /*--------------------------------------------------------------------------------*/
 /*---------------------------------Segunda section--------------------------------*/
 .second-section{
