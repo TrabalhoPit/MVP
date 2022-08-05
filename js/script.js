@@ -2,21 +2,31 @@
 //?Barra de Navegação
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-    if (scroll >= 750) { // 140 é a distancia que vc rola antes da logo sumir
-      $("#cabeca").css("width", "100%")
-      $("#cabeca").fadeOut();
+    if (scroll >= 700) {
+      $("#second-nav").removeClass("no-see");
+      $("#second-nav").css("width", "100%");
+      $("#second-nav").fadeIn();
+      $("#first-nav").css("width", "50%");
+      $("#first-nav").fadeOut();
     } else {
-      $("#cabeca").css("width", "50%") 
-      $("#cabeca").fadeIn();
+      $("#second-nav").addClass("no-see");
+      $("#second-nav").css("width", "50%");
+      $("#second-nav").fadeOut();
+      $("#first-nav").css("width", "50%") 
+      $("#first-nav").fadeIn();
+      // $("#first-nav").addClass("no-see");
     }
-  });
+});
 /*------------------------------------------------------------------------------------------------------*/
 //?Scroll Animation
 
 /*------------------------------------------------------------------------------------------------------*/
 $(".links").on("click", function() {
-    $(".line").hide();
+    $(".line").hide(350);
     $(".links").removeClass("active");
-    $(this).next().slideToggle();
+    $(".links").next().css( "color","#A07B5A");
+    $(this).css( "color","#A07B5A");
+    $(this).prev().slideToggle().css( "color","black");
+    $(this).next().slideToggle().css( "color","#A07B5A");
     $(this).addClass("active");
 })
