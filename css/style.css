@@ -32,7 +32,7 @@ section {
     justify-content: center;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 150px;
-    margin-right: 70px;
+    margin-left: 5%;
 }
 
 .escrita h1{
@@ -84,10 +84,6 @@ section {
     margin-bottom: 2px;
     text-decoration: none;
     outline: none;
-}
-
-.links.home {
-    color: #A07B5A;
 }
 
 .line {
