@@ -25,8 +25,7 @@ $(".links").on("click", function() {
     $(".line").hide(350);
     $(".links").removeClass("active");
     $(".links").next().css( "color","#A07B5A");
-    $(this).css( "color","#A07B5A");
     $(this).prev().slideToggle().css( "color","black");
-    $(this).next().slideToggle().css( "color","#A07B5A");
+    $(this).next().slideToggle().css( "color","#A07B5A")
     $(this).addClass("active");
 })
