@@ -6,14 +6,16 @@ $(window).scroll(function() {
       $("#second-nav").removeClass("no-see");
       $("#second-nav").css("width", "100%");
       $("#second-nav").fadeIn();
+      $("#first-nav").addClass("no-see");
       $("#first-nav").css("width", "50%");
       $("#first-nav").fadeOut();
     } else {
+      $("#first-nav").removeClass("no-see");
+      $("#first-nav").css("width", "50%") 
+      $("#first-nav").fadeIn();
       $("#second-nav").addClass("no-see");
       $("#second-nav").css("width", "50%");
       $("#second-nav").fadeOut();
-      $("#first-nav").css("width", "50%") 
-      $("#first-nav").fadeIn();
       // $("#first-nav").addClass("no-see");
     }
 });
